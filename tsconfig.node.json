@@ -3,12 +3,12 @@
     "types": ["node"],
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
-    "lib": ["ES2023","DOM"],
+    "lib": ["ES2023", "DOM"],
     "module": "ESNext",
     "skipLibCheck": true,
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    /* Module Resolution */
+    "moduleResolution": "node",  // Changed from "bundler" to "node"
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -20,13 +20,18 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true, // Improved safety
     "noUncheckedSideEffectImports": true,
+
+    /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]},
+      "@/*": ["src/*"]
+    }
   },
 
-  "include": ["vite.config.ts", "src/**/*"]
+  "include": ["vite.config.ts", "src/**/*"],
+
+  /* Ensure TypeScript finds Node.js types */
+  "exclude": ["node_modules", "dist"]
 }
