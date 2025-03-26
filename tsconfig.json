@@ -5,9 +5,13 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "lib":["dom"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "jsx": "react", 
+    "moduleResolution": "node", 
+    "allowSyntheticDefaultImports": true
   },
 }

@@ -28,7 +28,7 @@ export default function StickerSelection(
             </div>
             <div className="flex-1">
               <h4 className="font-semibold text-gray-800">
-                {selectedProduct.name}
+                {/* {selectedProduct.name} */}
               </h4>
               <div className="flex items-center gap-2 mt-1">
                 <Badge variant="outline" className="text-xs bg-gray-100">
