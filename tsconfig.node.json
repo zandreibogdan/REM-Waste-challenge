@@ -8,7 +8,7 @@
     "skipLibCheck": true,
 
     /* Module Resolution */
-    "moduleResolution": "node",  // Changed from "bundler" to "node"
+    "moduleResolution": "bundler",  // Changed from "bundler" to "node"
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
