@@ -6,14 +6,16 @@ on:
       - master
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false # Prevents permission issues
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -31,3 +33,4 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
+          token: ${{ secrets.GH_PAT }} # Use your personal access token
