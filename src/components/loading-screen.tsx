@@ -16,7 +16,7 @@ export default function LoadingScreen() {
 
         {/* Loading indicators */}
         <div className="flex flex-col justify-center space-y-4 items-center">
-          <div className="w-100 h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div className="w-64 sm:w-100 h-2 bg-gray-200 rounded-full overflow-hidden">
             <motion.div
               className="h-full bg-green-600"
               initial={{ width: "0%" }}

@@ -30,7 +30,7 @@
     }
   },
 
-  "include": ["vite.config.ts", "src/**/*"],
+  "include": ["vite.config.ts","tailwind.config.ts", "src/**/*"],
 
   /* Ensure TypeScript finds Node.js types */
   "exclude": ["node_modules", "dist"]
