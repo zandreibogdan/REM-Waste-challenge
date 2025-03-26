@@ -36,7 +36,7 @@ export default function ProductCard(
           className="w-full h-full"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent  to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-green-800" />
       </div>
 
       {/* Top badges */}
@@ -61,23 +61,23 @@ export default function ProductCard(
 
         <div className="grid grid-cols-2 gap-3 mb-4">
           <div className="flex items-center gap-2">
-            <Truck className="h-4 w-4 text-gray-300" />
+            <Truck className="h-6 w-6 text-gray-300" />
             <span className="text-sm">
               {product.allowed_on_road ? "Road Placement" : "Off-road Only"}
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <Weight className="h-4 w-4 text-gray-300" />
+            <Weight className="h-6 w-6 text-gray-300" />
             <span className="text-sm">
               {product.allows_heavy_waste ? "Heavy Waste" : "Light Waste Only"}
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <Calendar className="h-4 w-4 text-gray-300" />
+            <Calendar className="h-6 w-6 text-gray-300" />
             <span className="text-sm">{product.hire_period_days} Day Hire</span>
           </div>
           <div className="flex items-center gap-2">
-            <PoundSterling className="h-4 w-4 text-gray-300" />
+            <PoundSterling className="h-6 w-6 text-gray-300" />
             <span className="text-sm">
               {product.transport_cost
                 ? `£${product.transport_cost} Transport`
@@ -88,8 +88,8 @@ export default function ProductCard(
 
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-sm text-gray-300">Price (inc. VAT)</p>
-            <p className="text-2xl font-bold">
+            <p className="text-2sm text-gray-300">Price (inc. VAT)</p>
+            <p className="text-3xl font-bold">
               £{calculateTotalPrice(product).toFixed(2)}
             </p>
           </div>
