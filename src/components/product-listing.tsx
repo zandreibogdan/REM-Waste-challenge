@@ -42,7 +42,7 @@ export default function ProductListing() {
     return product.price_before_vat + vatAmount;
   };
 
-  if (!loading) return <LoadingScreen />;
+  if (loading) return <LoadingScreen />;
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
   return (
