@@ -12,7 +12,7 @@ export default function ProductCard(
   return (
     <motion.div
       key={product.id}
-      className={`relative rounded-xl overflow-hidden shadow-lg transition-all cursor-pointer h-[420px] ${
+      className={`relative rounded-xl overflow-hidden shadow-lg transition-all cursor-pointer sm:h-[420px] h-85 ${
         selectedProduct?.id === product.id
           ? "ring-2 ring-green-500 shadow-[0_0_15px_rgba(34,197,94,0.5)] border-8 border-green-600"
           : ""
@@ -36,7 +36,7 @@ export default function ProductCard(
           className="w-full h-full"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-green-800" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent sm:via-transparent via-transparent/80 to-green-800 [--tw-gradient-via-position:30%] sm:[--tw-gradient-via-position:40%]" />
       </div>
 
       {/* Top badges */}
@@ -61,23 +61,23 @@ export default function ProductCard(
 
         <div className="grid grid-cols-2 gap-3 mb-4">
           <div className="flex items-center gap-2">
-            <Truck className="h-6 w-6 text-gray-300" />
-            <span className="text-sm">
+            <Truck className="h-4 w-4 sm:h-6 sm:w-6 text-gray-300" />
+            <span className="text-sm ">
               {product.allowed_on_road ? "Road Placement" : "Off-road Only"}
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <Weight className="h-6 w-6 text-gray-300" />
+            <Weight className="h-4 w-4 sm:h-6 sm:w-6 text-gray-300" />
             <span className="text-sm">
               {product.allows_heavy_waste ? "Heavy Waste" : "Light Waste Only"}
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <Calendar className="h-6 w-6 text-gray-300" />
+            <Calendar className="h-4 w-4 sm:h-6 sm:w-6 text-gray-300" />
             <span className="text-sm">{product.hire_period_days} Day Hire</span>
           </div>
           <div className="flex items-center gap-2">
-            <PoundSterling className="h-6 w-6 text-gray-300" />
+            <PoundSterling className="h-4 w-4 sm:h-6 sm:w-6 text-gray-300" />
             <span className="text-sm">
               {product.transport_cost
                 ? `£${product.transport_cost} Transport`
